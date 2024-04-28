@@ -1,23 +1,158 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: 
-#f4f4f4;
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f4f4f4; }
+
+section { 
+    
+    padding: 20px; 
+    margin-bottom: 10px; 
+    background-color: white; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 56vh;
 }
 
-section {
+h2 { 
+    color: #333; }
+
+
+button { 
+    color: green;
+}
+
+.both-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.image-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+#moving-image {
+    position: absolute;
+    transition: transform 0.3s ease;
+    object-fit: contain; 
+}
+
+
+.answer-box {
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: burlywood;
+}
+
+#popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 251, 1, 0.8);
+    border-color: black;
+    border-width: 2px;
+    color: green;
     padding: 20px;
-    margin-bottom: 20px;
-    background-color: 
-white;
     border-radius: 5px;
-    box-shadow: 0 0 10px 
-rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 9999;
+}
+#popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
 }
 
-h2 {
-    color: 
-#333;
+#scroll-activated-image-container {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    position: relative;
 }
+
+#image-placeholder {
+    align-content: center;
+    height: 100%; 
+    background-color: #f0f0f0;
+}
+
+.scroll-activated {
+    opacity: 0; 
+    transition: opacity 0.1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.show-image {
+    opacity: 1;
+}
+
+.clock {
+height: 20vh;
+color: orange;
+font-size: 12vh;
+font-family: sans-serif;
+line-height: 20.4vh;
+display: flex;
+position: relative;
+overflow: hidden;
+}
+
+.clock::before,
+.clock::after {
+content: "";
+width: 7ch;
+height: 3vh;
+position: absolute;
+z-index: 2;
+}
+
+.clock::after {
+bottom: 0;
+}
+
+.clock > div {
+display: flex;
+}
+
+.tick {
+line-height: 17vh;
+}
+
+.tick-hidden {
+opacity: 0;
+}
+
+.move {
+animation: move linear 1s infinite;
+}
+
+@keyframes move {
+from {
+    transform: translateY(0vh);
+}
+to {
+    transform: translateY(-20vh);
+}
+}
+
