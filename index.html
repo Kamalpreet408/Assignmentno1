@@ -4,31 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Playground</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Add your CSS library links here -->
-    <!-- Add your JavaScript library links here -->
+    <link rel="stylesheet" href="./styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="./script.js"></script>
+        <script src="./script2.js"></script>
+        <script src="./script3.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./script4.js"></script>
+
 </head>
 <body>
     <section id="image-movement">
         <h2>Section 1: Image Movement</h2>
-        <!-- Add your image and buttons here -->
+        
+        <div class="both-container">
+            <div class="button-container">
+                <button id="btn-up">Up</button>
+                <button id="btn-down">Down</button>
+                <button id="btn-left">Left</button>
+                <button id="btn-right">Right</button>
+            </div>
+            <div class="image-container">
+                <img id="moving-image" src="./assets/R.jpg" alt="Moving Image">
+            </div>
+        </div>
     </section>
 
     <section id="interactive-trivia">
         <h2>Section 2: Interactive Trivia Question</h2>
-        <!-- Add your trivia question and answer buttons here -->
+        <div id="question-container">
+            <p>Which one of the following is also known as a Conditional Expression?</p>
+            <div id="answer-options">
+                <div class="answer-box" data-answer="A">A) Alternative to if-else</div>
+                <div class="answer-box" data-answer="B">B) Switch statement</div>
+                <div class="answer-box" data-answer="C">C) If-then-else statement</div>
+                <div class="answer-box" data-answer="D">D) Immediate if</div>
+            </div>
+        </div>
+        <div id="popup-container">
+            <div id="popup" class="hidden"></div>
+        </div>
     </section>
 
-    <section id="scroll-activated-image">
+    <section id="scroll-activated-image-container">
         <h2>Section 3: Scroll-Activated Image Movement</h2>
-        <!-- Add your scroll-activated image here -->
+        
+        <div id="scroll-activated-image">
+         <div id="image-placeholder" src="./assets/R2.jpg" alt="image-placeholder"></div>
+        </div>
     </section>
 
     <section id="choose-your-own-adventure">
-        <h2>Section 4: Choose-Your-Own-Adventure</h2>
-        <!-- This is your creative space! -->
+        <h2>Section 4: Adventure</h2>
+        <h5>Digital clock</h5>
+        
+<div class="clock">
+        <div class="hours">
+            <div class="first">
+                <div class="number">0</div>
+            </div>
+            <div class="second">
+                <div class="number">0</div>
+            </div>
+        </div>
+        <div class="tick">:</div>
+        <div class="minutes">
+            <div class="first">
+                <div class="number">0</div>
+            </div>
+            <div class="second">
+                <div class="number">0</div>
+            </div>
+        </div>
+        <div class="tick">:</div>
+        <div class="seconds">
+            <div class="first">
+                <div class="number">0</div>
+            </div>
+            <div class="second infinite">
+                <div class="number">0</div>
+            </div>
+        </div>
+    </div>
     </section>
 
-    <!-- Remember to add your JavaScript file link here if you create one -->
+    <section id="reflection">
+        <h2>Section 5: Reflection</h2>
+       
+	<p>Integrating external libraries significantly enhanced the website by adding out-of-the-box features that would have been time-consuming to develop independently from scratch which would have taken more time as opposed to these external libraries. The main libraries used in this project were: "jQuery" and "animejs", which really streamlined the website creation process. However, this process came with challenges, particularly in understanding and implementing the libraries effectively, leading to a notable learning curve. The predefined functions within these libraries limited the scope of customization and creativity beyond their intended purposes by their developers and contributors, which highlighted a trade-off between convenience and flexibility in utilizing these external libraries for the web development. Despite the demerits, the overall benefits, such as streamlined development and enhanced functionality, outweighed the difficulties encountered during integration. The user experiencedrastically improved when these libraries and css was implemeted as opposed to working with plain html. Also the development process was more efficient and saved a lot of time.</p>
+    </section>
 </body>
 </html>
